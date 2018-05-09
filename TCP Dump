@@ -1,17 +1,31 @@
 #!/bin/bash
+
+echo "command to install tcpdump utilities"
 apt install tcpdump
 read
+
+echo" To use the utilities you will need to issue command tcpdump with options as listed below"
 echo "these are the command option to use with tcpdump"
 read
 echo "The following are options that can be used with tcpdump"
+read
 echo "-i any: Listen on all interfaces"
+read
 echo "-i eth0: Listen on the eth0 interface."
+read
 echo "-D: Show the ist of available interfaces"
+read
 echo "-n: Don't resolve hostnames"
+read
 echo "-nn: Don't resolve hostnames or port names."
 echo "-q: Be less verbose or quiet with your output."
 echo "-t: Give human-readable timestamp output."
 Read
+
+echo " capture all traffice for interface for en0"
+sudo tcpdump -i <net int name> icmp -vv
+read
+
 echo " this shows the tcp dump information for source and destination  
 tcpdump src 2.3.4.5
 tcpdump dst 3.4.5.6
